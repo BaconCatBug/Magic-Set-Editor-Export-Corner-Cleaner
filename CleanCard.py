@@ -74,7 +74,8 @@ if decision == 'Yes, make my cards sexy!':
                 for e_middleY in range(0, height - 1):
                     pixdata[e_MiddleX, e_middleY] = (0, 0, 0, 0)
         # Outputs the converted image file.
-        filename = e_FilteredFilename.split('.')
-        img.save(filename[0] + "_Cleaned." + filename[1], "PNG")
+        print(e_FilteredFilename)
+        filename = e_FilteredFilename
+        img.save(filename[:-4] + ".Cleaned.png", "PNG")
 else:
     pass
