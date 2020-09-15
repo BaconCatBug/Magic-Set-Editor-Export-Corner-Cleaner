@@ -1,7 +1,11 @@
+# You need these installed to run the bare script
+# pip install pillow pymsgbox
+
 from PIL import Image
 import glob
 from pymsgbox import confirm
 
+# Sets up the launch confirmation dialog box
 decision = \
     confirm(
         text='This will now clean up the corners of all png images in the folder this script was run from.\n\n'
@@ -11,13 +15,15 @@ decision = \
         buttons=['Yes, make my cards sexy!', 'No, I am scared of transparent pixels!']
     )
 
-if decision is 'Yes, make my cards sexy!':
+# Runs the program if you select yes.
+if decision == 'Yes, make my cards sexy!':
+    # Gets the list of png files in folder.
     rawFileList = glob.glob('*.png')
     filteredFileList = []
     for e_RawFileList in rawFileList:
         if 'Cleaned' not in e_RawFileList:
             filteredFileList.append(e_RawFileList)
-
+    # Runs the conversion for each png file.
     for e_FilteredFilename in filteredFileList:
         img = Image.open(e_FilteredFilename)
         img = img.convert("RGBA")
@@ -67,8 +73,8 @@ if decision is 'Yes, make my cards sexy!':
             for e_MiddleX in range(375, 377):
                 for e_middleY in range(0, height - 1):
                     pixdata[e_MiddleX, e_middleY] = (0, 0, 0, 0)
-
+        # Outputs the converted image file.
         filename = e_FilteredFilename.split('.')
         img.save(filename[0] + "_Cleaned." + filename[1], "PNG")
 else:
-    exit(1)
+    pass
