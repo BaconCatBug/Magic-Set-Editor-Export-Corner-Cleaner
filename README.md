@@ -2,6 +2,8 @@ Usage:
 
 Download either the .py file and .bat file, or download one of the precompiled exe files.
 
+(Click the green "Code" button and download the zip.)
+
 Drag and drop your card onto the .bat or exe file.
 
 Works with multiple images.
