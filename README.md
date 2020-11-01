@@ -14,7 +14,7 @@ Download either the .py file and .bat file, or download one of the precompiled e
 
 (Click the green "Code" button and download the zip.)
 
-Drag and drop your card onto the .bat or exe file.
+Drag and drop your card(s) onto the .bat or exe file.
 
 Works with multiple images.
 
