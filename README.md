@@ -39,7 +39,7 @@ You can change the New File vs Overwrite behaviour with the overwrite_cards vari
 
 ---
 
-To compile yourself, install Python 3, then do the following in a console:
+To compile yourself, install Python 3, install Pillow, then do the following in a console:
 
 pip install pyinstaller
 
